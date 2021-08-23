@@ -6,7 +6,7 @@
     - https://hub.docker.com/r/selenium/hub/tags?page=1&ordering=last_updated
 
 - To run: 
-    export BROWSER=chrome && python Tests/test_example.py
+    `export BROWSER=chrome && python Tests/test_example.py`
 
 - Attempt to use noVNC
     - https://github.com/LibVNC/x11vnc
