@@ -6,6 +6,12 @@
     - https://hub.docker.com/r/selenium/hub/tags?page=1&ordering=last_updated
 
 - To run: 
+    - First enter in terminal: 
+    
+    `docker-compose up -d`
+    
+    - then
+    
     `export BROWSER=chrome && python Tests/test_example.py`
 
 - Attempt to use noVNC
