@@ -8,14 +8,12 @@ from selenium.webdriver.common.keys import Keys
 
 class HackernewsSearchTest(unittest.TestCase):
 
-
     def setUp(self):
         caps = {'browserName': os.getenv('BROWSER', 'chrome')}
         self.browser = webdriver.Remote(
             command_executor='http://localhost:4444/wd/hub',
             desired_capabilities=caps
         )
-            
 
     def test_hackernews_search_for_testdrivernio(self):
         self.browser.get('https://news.ycombinator.com')
@@ -49,7 +47,6 @@ class HackernewsSearchTest(unittest.TestCase):
         time.sleep(3)  # simulate long running test
         self.assertNotIn('<em>', self.browser.page_source)
 
-
     def tearDown(self):
         self.browser.quit()
 
@@ -63,4 +60,11 @@ Notes:
 - Original source obtained from : https://testdriven.io/blog/distributed-testing-with-selenium-grid/
 - Versions of Selenium/Hub images; look under tag tab
     - https://hub.docker.com/r/selenium/hub/tags?page=1&ordering=last_updated
+- To run: 
+    export BROWSER=chrome && python Tests/test_example.py
+
+- Attempt to use noVNC
+    - https://github.com/LibVNC/x11vnc
+    - Installation : Windows Installation 
+        - npm install @novnc/novnc
 """
